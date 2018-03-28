@@ -1,0 +1,553 @@
+@import "variables.styl"
+@import "mixins.styl"
+
+body
+  @extend .sans-serif
+  font-size 20px
+  color gray-dark  
+  background: url("../../img/bg.png")
+
+p
+  line-height 1.5
+  margin 30px 0
+
+p, li
+  a
+    text-decoration underline
+
+h1, h2, h3, h4, h5, h6
+  @extend .sans-serif
+  font-weight 800
+
+a
+  color gray-dark
+  &:hover, &:focus
+    color brand-primary
+a img
+  &:hover, &:focus
+    cursor zoom-in
+
+hr.small
+  max-width 100px
+  margin 15px auto
+  border-width 4px
+  border-color white
+
+.navbar-custom
+  position absolute
+  top 0
+  left 0
+  width 100%
+  z-index 3
+  @extend .sans-serif
+  .navbar-brand
+    font-weight 800
+  .nav
+    li
+      a
+        text-transform uppercase
+        font-size 12px
+        font-weight 800
+        letter-spacing 1px
+        text-decoration none
+  @media only screen and (min-width: 768px)
+    background transparent
+    border-bottom 1px solid transparent
+    .navbar-brand
+      color white
+      padding 20px
+      &:hover, &:focus
+        color white-faded
+    .nav
+      li
+        a
+          color white
+          padding 20px
+          &:hover, &:focus
+            color white-faded
+  @media only screen and (min-width: 1170px)
+    -webkit-transition background-color 0.3s
+    -moz-transition background-color 0.3s
+    transition background-color 0.3s
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform translate3d(0, 0, 0)
+    -moz-transform translate3d(0, 0, 0)
+    -ms-transform translate3d(0, 0, 0)
+    -o-transform translate3d(0, 0, 0)
+    transform translate3d(0, 0, 0)
+    -webkit-backface-visibility hidden
+    backface-visibility hidden
+    &.is-fixed
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position fixed
+      top -61px
+      background-color rgba(255, 255, 255, 0.9)
+      border-bottom 1px solid darken(rgb(255, 255, 255, 1), 5%)
+      -webkit-transition -webkit-transform 0.3s
+      -moz-transition -moz-transform 0.3s
+      transition transform 0.3s
+      .navbar-brand
+        color gray-dark
+        &:hover, &:focus
+          color brand-primary
+      .nav
+        li
+          a
+            color gray-dark
+            &:hover, &:focus
+              color brand-primary
+    &.is-visible
+      /* if the user changes the scrolling direction, we show the header */
+      -webkit-transform translate3d(0, 100%, 0)
+      -moz-transform translate3d(0, 100%, 0)
+      -ms-transform translate3d(0, 100%, 0)
+      -o-transform translate3d(0, 100%, 0)
+      transform translate3d(0, 100%, 0)
+
+.intro-header
+  background-color gray
+  background-position center center
+  background-attachment scroll
+  @extend .background-cover
+  margin-bottom 50px
+  .site-heading, .post-heading, .page-heading
+    padding 100px 0 50px
+    color white
+    @media only screen and (min-width: 768px)
+      padding 150px 0
+    &.archives
+      color brand-primary
+      margin-top 60px
+  .site-heading, .page-heading
+    text-align center
+    h1
+      margin-top 0
+      font-size 50px
+    .subheading
+      font-size 24px
+      line-height 1.1
+      display block
+      @extend .sans-serif
+      font-weight 300
+      margin 10px 0 0
+    @media only screen and (min-width: 768px)
+      h1
+        font-size 80px
+  .post-heading
+    h1
+      font-size 35px
+    .subheading, .meta
+      line-height 1.1
+      display block
+    .subheading
+      @extend .sans-serif
+      font-size 24px
+      margin 10px 0 30px
+      font-weight 600
+    .meta
+      @extend .serif
+      font-style italic
+      font-weight 300
+      font-size 20px
+      a
+        color white
+    @media only screen and (min-width: 768px)
+      h1
+        font-size 55px
+      .subheading
+        font-size 30px
+
+.post-preview
+  > a
+    color gray-dark
+    &:hover, &:focus
+      text-decoration none
+      color brand-primary
+    > .post-title
+      font-size 30px
+      margin-top 30px
+      margin-bottom 10px
+      &.archive
+        font-size 22px
+    > .post-subtitle
+      margin 0
+      font-weight 300
+      margin-bottom 10px
+  > .post-meta
+    color gray
+    font-size 18px
+    font-style italic
+    margin-top 0
+    &.archive
+      font-size 16px
+    > a
+      text-decoration none
+      color gray-dark
+      &:hover, &:focus
+        color brand-primary
+        text-decoration underline
+  @media only screen and (min-width: 768px)
+    > a
+      > .post-title
+        font-size 36px
+
+.section-heading
+  font-size 36px
+  margin-top 60px
+  font-weight 700
+
+.caption
+  text-align center
+  font-size 14px
+  padding 10px
+  font-style italic
+  margin 0
+  display block
+  border-bottom-right-radius 5px
+  border-bottom-left-radius 5px
+
+.post-tags, .post-categories  
+  margin-top 30px
+  margin-bottom 5px
+  padding-top 15px
+  border-top 1px solid #000
+  font-size 15px
+  a
+    border-bottom 1px dotted #ABABAB
+    text-transform uppercase
+    margin-right 10px
+    &:hover, &:visited, &:active
+      text-decoration none
+      border-bottom none
+
+.archive-before-pagination
+  height 30px
+footer
+  padding 50px 0 65px
+  .list-inline
+    margin 0
+    padding 0
+  .copyright
+    font-size 14px
+    text-align center
+    margin-bottom 0
+    margin-top 0
+
+.floating-label-form-group
+  font-size 14px
+  position relative
+  margin-bottom 0
+  padding-bottom 0.5em
+  border-bottom 1px solid gray-light
+  input, textarea
+    z-index 1
+    position relative
+    padding-right 0
+    padding-left 0
+    border none
+    border-radius 0
+    font-size 1.5em
+    background none
+    box-shadow none !important
+    resize none
+  label
+    display block
+    z-index 0
+    position relative
+    top 2em
+    margin 0
+    font-size 0.85em
+    line-height 1.764705882em
+    vertical-align middle
+    vertical-align baseline
+    opacity 0
+    -webkit-transition top 0.3s ease,opacity 0.3s ease
+    -moz-transition top 0.3s ease,opacity 0.3s ease
+    -ms-transition top 0.3s ease,opacity 0.3s ease
+    transition top 0.3s ease,opacity 0.3s ease
+  &::not(:first-child)
+    padding-left 14px
+    border-left 1px solid gray-light
+
+.floating-label-form-group-with-value
+  label
+    top 0
+    opacity 1
+
+.floating-label-form-group-with-focus
+  label
+    color brand-primary
+
+form .row:first-child .floating-label-form-group
+  border-top 1px solid gray-light
+
+.btn
+  @extend .sans-serif
+  text-transform uppercase
+  font-size 14px
+  font-weight 800
+  letter-spacing 1px
+  border-radius 0
+  padding 15px 25px
+
+.btn-lg
+  font-size 16px
+  padding 25px 35px
+
+.btn-default
+  &:hover, &:focus
+    background-color brand-primary
+    border 1px solid brand-primary
+    color white
+
+.pager
+  margin 20px 0 0
+  li
+    > a, > span
+      @extend .sans-serif
+      text-transform uppercase
+      font-size 14px
+      font-weight 800
+      letter-spacing 1px
+      padding 15px 25px
+      background-color white
+      border-radius 0
+    > a:hover, > a:focus
+      color white
+      background-color brand-primary
+      border 1px solid brand-primary
+  .disabled
+    > a, > a:hover, > a:focus, > span
+      color gray
+      background-color gray-dark
+      cursor not-allowed
+
+::-moz-selection
+  color white
+  text-shadow none
+  background brand-primary
+
+::selection
+  color white
+  text-shadow none
+  background brand-primary
+
+img::selection
+  color white
+  background transparent
+
+img::-moz-selection
+  color white
+  background transparent
+
+body
+  webkit-tap-highlight-color brand-primary
+
+
+
+
+.navbar-custom.navbar-fixed-top
+  position fixed
+  z-index 100
+  background-color #34302d
+  height 80px
+
+.navbar-custom.navbar-fixed-top .navbar-brand
+  padding 20px
+  height auto
+  color white
+  @media only screen and (max-width: 480px)
+    padding 10px 15px
+
+.navbar-custom.navbar-fixed-top .navbar-brand span.sub
+  display block
+  font-weight 600
+  color #6db33f
+
+@media only screen and (max-width: 480px)
+  .navbar-custom.navbar-fixed-top .navbar-brand span.sub span
+    display block
+
+.navbar-custom.navbar-fixed-top .navbar-right
+  padding-top 10px
+
+.navbar-custom.navbar-fixed-top .navbar-toggle
+  margin-top 15px
+  padding 15px 12px
+  border-color #6db33f
+
+.navbar-custom.navbar-fixed-top .navbar-toggle .icon-bar
+  background-color #6db33f
+
+.navbar-custom.navbar-fixed-top .navbar-toggle:focus,
+.navbar-custom.navbar-fixed-top .navbar-toggle:hover
+  background-color transparent
+
+.navbar-custom.navbar-fixed-top .navbar-collapse
+  background-color #E4F3DE
+  @media only screen and (min-width: 768px)
+      background transparent  
+
+.navbar-custom.navbar-fixed-top .navbar-collapse a
+  color #333
+
+  @media only screen and (min-width: 768px)
+      color #fff
+
+.navbar-custom.navbar-fixed-top .navbar-collapse a:hover
+  color #6db33f
+
+  @media only screen and (min-width: 768px)
+      color rgba(255,255,255,0.8)    
+
+.navbar-custom.navbar-fixed-top .navbar-collapse.in
+  overflow-y visible
+
+.intro-header  
+  margin-bottom 30px
+  background-color white
+
+  @media only screen and (min-width: 992px)
+    margin-bottom 50px
+
+.intro-header.post
+  margin-bottom 0
+  background: transparent
+  
+.intro-header .container
+  margin-top 80px
+  min-height 0px
+
+.intro-header .container .site-heading
+  display none
+
+.intro-header .container .post-heading
+  padding 15px 0 0 0
+  color #404040
+
+.intro-header .container .post-heading h1
+  word-wrap break-word
+  word-break keep-all 
+
+.container
+  min-height 700px
+
+.container .index-category
+  @media only screen and (min-width: 768px)
+    margin-bottom 30px
+    padding-bottom 30px
+    border-bottom 1px solid black
+  @media only screen and (min-width: 992px)
+    margin-bottom 0
+    padding-bottom 0
+    border-bottom 0
+    width 16.66666667% 
+
+.container .index-category .category
+  display none
+
+  @media only screen and (min-width: 768px)
+    display block
+
+.container .index-page    
+  @media only screen and (min-width: 992px)
+    margin-left 0
+    padding-left 30px
+    width 50%
+
+.post-tags a,
+.post-categories a
+  border-bottom 0
+
+.post-categories a
+  background-color #6db33f
+  color white
+  padding 3px 12px 5px 12px
+  border-radius 50px
+
+.post-categories a:hover
+  color rgba(255,255,255,0.8)
+
+.post-preview .post-meta
+  margin-bottom 0
+
+.post-preview > a > .post-title
+  margin-top 5px
+  word-wrap: break-word
+  word-break: keep-all
+
+.post-preview .cat 
+  display inline-block
+  margin 5px 0
+  padding 0 10px 2px 10px
+  background-color #6db33f
+  border-radius 50px
+  color white
+
+.post-preview .cat:hover  
+  color rgba(255,255,255,0.8)
+
+.post-main-content
+  margin-top 10px
+  padding-top 10px
+  padding-bottom 15px
+  border-top 1px solid black
+
+.post-main-content p  
+  word-wrap break-word
+  word-break keep-all  
+
+#site_search
+  margin-bottom 20px
+
+  @media only screen and (min-width: 992px)
+    margin 0 auto 30px
+    width 745px 
+
+#local-search-input
+  background transparent
+  border-color #6db33f
+  border-bottom 0
+  border-radius 0
+  color #6db33f
+  font-weight bold
+
+#local-search-result
+  padding 0 25px    
+  border 1px solid #6db33f
+
+.category strong
+  font-size 18px
+  color #6db33f
+
+.category ul
+  padding-left 8px
+
+.category li
+  list-style none
+
+.category li a
+  text-decoration none  
+
+.category li a span
+  font-size 0.8em
+
+.footer 
+  padding 20px 0
+  background-color #34302d
+  width 100%
+
+.footer .container
+  padding-top 0
+  min-height 0
+
+.footer .container p,
+.footer .container a
+  color #eee
+
+.footer .container a:hover
+  color #6db33f
+
+.footer .container .copyright.main span
+  color #6db33f
+  font-weight 600

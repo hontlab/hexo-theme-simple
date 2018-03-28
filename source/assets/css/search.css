@@ -1,0 +1,16 @@
+
+ul.search-result-list {
+  padding-left: 10px;
+}
+a.search-result-title {
+  font-weight: bold;
+}
+p.search-result {
+  color=#555;
+  word-wrap: break-word;
+}
+em.search-keyword {  
+  font-weight: bold;  
+  color: #6db33f;
+  font-style: normal;
+}

@@ -1,0 +1,54 @@
+<!-- Page Header -->
+<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+
+                    <h1><%- config.title %></h1>
+                    <hr class="small">
+                    <span class="subheading"><%- config.subtitle %></span>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+
+    <div id="site_search" class="main-content-wrap">
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="Stay search." 
+        class="form-control input--xlarge" autofocus="autofocus"/>
+        <div id="local-search-result"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 index-category">
+            <aside class="page-aside">
+
+                <section class="category">
+                    <strong>CATEGORIES</strong>
+                    <ul>                        
+                        <% site.categories.each(function(categories){ %>
+                        <%- partial('_partial/categories-index', {categories: categories}) %>
+                        <% }); %>
+                    </ul>
+                </section>
+            </aside>
+        </div>    
+
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 index-page">
+            <% page.posts.each(function(item){ %>
+                <%- partial('_partial/article-index', {item: item}) %>
+            <% }); %>
+
+            <%- partial('_partial/pagination') %>
+        </div>
+
+    </div>
+
+</div>
+
