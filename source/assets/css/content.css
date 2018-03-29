@@ -11,10 +11,10 @@ h3{margin-top:15px;font-size:18px;}
 h5{font-size:18px;}
 p{margin:20px 0;}
 .intro-header .post-heading .meta{margin-top:15px;font-size:18px;}
-.post-main-content{padding:0;}
 
 @media only screen and (min-width:768px){
 	.intro-header .post-heading h1{font-size:45px;}
+	.post-main-content{padding:0;}
 }
 
 .box{padding:10px 15px;background-color:#f5f5f5;border:1px solid #ccc;border-radius:50px;}
