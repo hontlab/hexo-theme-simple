@@ -4,6 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--hexo-auto-canonical-->
+    <%- autoCanonical(config, page) %>
+
     <!--Description-->
     <% if (page.description){ %>
         <meta name="description" content="<%= page.description %>">
@@ -51,7 +54,9 @@
         <meta property="og:image" content="<%= config.url %><%= config.cover %>"/>
     <% } %>
 
-        <meta name="twitter:card" content="summary" />
+    <meta property="og:image:width" content="1200" />
+
+    <meta name="twitter:card" content="summary" />
     <% if(theme.twitter_handle) { %>
         <meta name="twitter:site" content="<%= theme.twitter_handle %>>" />
     <% } %>
