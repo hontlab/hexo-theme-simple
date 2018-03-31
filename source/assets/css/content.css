@@ -50,9 +50,12 @@ p{margin:20px 0;}
 	.post-main-content{margin-left:8%;padding:0;width:84%;}
 	.container.main{margin-bottom:50px;padding:50px 0 30px 0;background-color:#fff;border:1px solid #34302d;}
 
-	.post-heading-wrap{margin-left:8%;width:84%;}	
+	.post-heading-wrap,
+	.post-comment{margin-left:8%;width:84%;}	
 	.post-tags, .post-categories{width:42%;}
 	.post-tags{margin-left:8%;}
+
+
 
 }
 
