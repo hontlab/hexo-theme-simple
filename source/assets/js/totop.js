@@ -1,5 +1,8 @@
 $(window).scroll(function() {
-    $(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
+	// 1200px 이상에서 사용할 JavaScript
+	if (matchMedia("screen and (min-width: 1200px)").matches) {
+  		$(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
+	}
 });
 
 $("#rocket").click(function() {
