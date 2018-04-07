@@ -39,5 +39,16 @@
     <%- tags.join(' ') %>
     <% } %>
 
+    <section class="item-excerpt">
+        <p>
+          <% if (item.excerpt){ %>
+            <%- item.excerpt %>
+          <% } else { %>
+            <%- item.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
+            ...
+          <% } %>
+        </p>
+    </section>
+
 </div>
 <hr>

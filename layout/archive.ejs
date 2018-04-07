@@ -23,14 +23,29 @@
 </header>
 
 <!-- Main Content -->
-<div class="container">
+<div class="container main">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            <!--
+            <% if(page.archive){ %>
+                <ul class="tag-box inline list-unstyled">
+                  <% var years = _.uniq(site.posts.sort('date', -1).map(p => p.date.year())) %>
+                  <% years.forEach(function (year) { %>
+                    <li>
+                      <a href="<%= config.root + config.archive_dir + "/" + year %>"><%= year %></a>
+                    </li>
+                  <% }); %>
+                </ul>
+            <% }; %>
+            -->
+            
             <% page.posts.each(function(item){ %>
                 <%- partial('_partial/article-archive', {item: item}) %>
             <% }); %>
             <div class="archive-before-pagination"></div>
             <%- partial('_partial/pagination') %>
+
         </div>
     </div>
 </div>

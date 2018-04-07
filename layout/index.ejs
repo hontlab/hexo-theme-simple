@@ -55,7 +55,15 @@
                 <%- partial('_partial/article-index', {item: item}) %>
             <% }); %>
 
+
+            <nav id="page-nav">
+              <%- paginator({mid_size: 2, prev_text: '&lt; ', next_text: ' &gt;'}) %>
+            </nav>
+
+            <!--
             <%- partial('_partial/pagination') %>
+            -->
+
         </div>
 
     </div>
