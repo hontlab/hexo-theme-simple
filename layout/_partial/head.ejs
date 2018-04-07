@@ -7,6 +7,16 @@
     <!--hexo-auto-canonical-->
     <%- autoCanonical(config, page) %>
 
+    <!--Keyword-->
+    <% if (page.tags) {
+        var keywords = [];
+        for (var i in page.tags.data) {
+            keywords.push(page.tags.data[i].name);
+        }
+    %>
+        <meta name="keywords" content="<%= keywords.join(',') %>" />
+    <% } %>
+
     <!--Description-->
     <% if (page.description){ %>
         <meta name="description" content="<%= page.description %>">

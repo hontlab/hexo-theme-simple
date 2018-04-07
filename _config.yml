@@ -25,7 +25,7 @@ comments:
     comment_colorscheme: light
 
 # Google Analytics Tracking ID
-google_analytics:
+google_analytics: UA-116686339-1
 
 # Addthis ID
 addthis:
