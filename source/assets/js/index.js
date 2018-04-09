@@ -2,6 +2,7 @@
  * Main JS file
  */
 
+/* progress-bar */
 (function ($) {
   'use strict'
 
@@ -77,3 +78,8 @@
 
   $('article').css('min-height', minHeight())
 }(jQuery))
+
+/* external-link */
+$('.post-main-content a').append('<i class="fa fa-external-link" aria-hidden="true"></i>');
+
+
