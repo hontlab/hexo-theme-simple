@@ -21,7 +21,7 @@ p a, li a{text-decoration:none;}
 	/* background-position:0 1.12em; */
 	/* color:#ffb000; */
     /* color:#089378; */
-    color:#6db33f;
+    color:burlywood;
     font-weight:600;
 }
 .post-main-content a i{position:relative;top:-8px;margin:0 2px;font-size:14px;}
@@ -61,11 +61,11 @@ p{margin:20px 0;}
 }
 
 .box{padding:10px 15px;background-color:#f5f5f5;border:1px solid #ccc;border-radius:50px;}
-.highlight{color:#6db33f;font-weight:600;}
+.highlight{color:burlywood;font-weight:600;}
     
 #page-nav{margin-top:30px;width:100%;text-align:center;}
 #page-nav .next, #page-nav .page-number, #page-nav .prev{margin-right:5px;margin-left:5px;font-size:90%;}
-#page-nav .current{color:#6db33f;font-weight:600;vertical-align:top;}
+#page-nav .current{color:burlywood;font-weight:600;vertical-align:top;}
 #page-nav a:hover,
 #page-nav a:active,
 #page-nav a:focus{text-decoration:none;}
@@ -79,11 +79,12 @@ p{margin:20px 0;}
 .tag-box a{display:inline-block;margin:2px;padding:5px 10px;border:1px dotted #bbb;border-radius:5px;width:100%;font-size:18px;font-weight:600;text-align:center;text-decoration:none;}
 .tag-box a:hover,
 .tag-box a:active,
-.tag-box a:focus{background-color:#6db33f;color:#fff;transition:background-color ease .3s;}
+.tag-box a:focus{background-color:burlywood;color:#fff;transition:background-color ease .3s;}
 .tag-box a sup:before{content:"(";}
 .tag-box a sup:after{content:")";}
 
 #progress {
+    display: none;
     overflow: hidden;
     left: 0;
     top: 80px;
@@ -133,8 +134,14 @@ p{margin:20px 0;}
 
 .navbar-custom.navbar-fixed-top .navbar-collapse a{position:relative;}
 .navbar-custom.navbar-fixed-top .navbar-collapse a:after{content:"";position:absolute;left:50%;right:50%;bottom:8px;height:1px;margin:0 12px;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-ms-transition:all 0.2s;-o-transition:all 0.2s;transition:all 0.2s}
-.navbar-custom.navbar-fixed-top .navbar-collapse a:hover{color:#fff;}
-.navbar-custom.navbar-fixed-top .navbar-collapse a:hover:after{left:0;right:0;background-color:#fff}
+
+.navbar-custom.navbar-fixed-top .navbar-collapse a:hover{color:burlywood;}
+.navbar-custom.navbar-fixed-top .navbar-collapse a:hover:after{left:0;right:0;background-color:burlywood}
+
+@media only screen and (min-width:1200px){
+    .navbar-custom.navbar-fixed-top .navbar-collapse a:hover{color:#fff;}
+    .navbar-custom.navbar-fixed-top .navbar-collapse a:hover:after{background-color:#fff}
+}
 
 .post-preview > a.tag{margin-left:5px;}
 

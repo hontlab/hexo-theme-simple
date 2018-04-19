@@ -31,7 +31,8 @@
       var offsetTop = $postContent.offset().top
       var y = $(document).scrollTop()
       var base = Math.max(5, offsetTop + ph - wh)
-      var progress = Math.min(100, y / base * 100)
+      //var progress = Math.min(100, y / base * 100)
+      var progress = 100
 
       $('#bar').css({
         'width': progress + '%',
@@ -78,11 +79,3 @@
 
   $('article').css('min-height', minHeight())
 }(jQuery))
-
-/* external-link */
-$('.post-main-content a[target="_blank"]').append('<i class="fa fa-external-link" aria-hidden="true"></i>');
-
-/* book-image */
-$('.post-main-content img').parent().css('text-align', 'center');
-
-
