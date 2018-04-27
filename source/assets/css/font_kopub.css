@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotumBold.eot');
+    src: url('../font/KoPubDotumBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/KoPubDotumBold.woff2') format('woff2'),
+        url('../font/KoPubDotumBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotumLight.eot');
+    src: url('../font/KoPubDotumLight.eot?#iefix') format('embedded-opentype'),
+        url('../font/KoPubDotumLight.woff2') format('woff2'),
+        url('../font/KoPubDotumLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KoPubDotum';
+    src: url('../font/KoPubDotumMedium.eot');
+    src: url('../font/KoPubDotumMedium.eot?#iefix') format('embedded-opentype'),
+        url('../font/KoPubDotumMedium.woff2') format('woff2'),
+        url('../font/KoPubDotumMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
