@@ -145,6 +145,7 @@ p{margin:20px 0;}
 
 .post-preview > a.tag{margin-left:5px;}
 
+
 .navbar-custom.navbar-fixed-top .navbar-brand{font-style:italic;}
-.navbar-custom.navbar-fixed-top .navbar-brand span.sub{position:relative;left:-5px;}
+.navbar-custom.navbar-fixed-top .navbar-brand span.sub{position:relative;left:-5px;letter-spacing:-2px;}
 .navbar-custom.navbar-fixed-top .navbar-brand span.sub span{color:#fff;}
