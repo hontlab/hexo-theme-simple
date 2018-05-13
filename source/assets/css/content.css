@@ -176,3 +176,7 @@ p{margin:20px 0;}
 .footer{padding:12px 0;}
 
 #about img{width:200px;height:200px;border-radius:100px;}
+
+article .container .row img{padding:20px;border:1px dashed #595654;}
+
+.order{margin-top:30px;padding:19px 30px;border:1px solid #deb887;color:#deb887;}
