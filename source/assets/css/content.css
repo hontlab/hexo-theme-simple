@@ -180,3 +180,12 @@ p{margin:20px 0;}
 article .container .row img{padding:20px;border:1px dashed #595654;}
 
 .order{margin-top:30px;padding:19px 30px;border:1px solid #deb887;color:#deb887;}
+
+.book_cnt{margin-top:30px;padding:20px;border:1px solid #deb887;color:#deb887;}
+.post-main-content .book_cnt p{overflow:hidden;}
+
+article .container .row .book_cnt img{margin-top:-20%;margin-bottom:-20%;padding:0;border:0;}
+
+@media only screen and (min-width:768px){
+    article .container .row .book_cnt img{margin-top:-16.5%;margin-bottom:-16.5%;}
+}
