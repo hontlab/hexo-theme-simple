@@ -191,3 +191,8 @@ article .container .row .book_cnt .book-img img{margin-top:-20%;margin-bottom:-2
     article .container .row .book_cnt .book-img img{margin-top:-16.5%;margin-bottom:-16.5%;}
 }
 
+article .container .row .post-main-content .memo img{margin:-20px auto 20px;}
+
+@media only screen and (min-width:768px){
+    article .container .row .post-main-content .memo img{width:50%;} 
+}
