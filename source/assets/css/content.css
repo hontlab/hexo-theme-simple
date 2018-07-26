@@ -180,7 +180,7 @@ p{margin:20px 0;}
 .footer{padding:12px 0;}
 
 #about img{padding:0;border:0;width:70%;}
-#about p{margin:0;padding:15px;background-color:#000;border-top:1px solid #fff;color:#fff;text-align:right;}
+#about p{margin:0;padding:15px;background-color:#000;border:1px solid #fff;color:#fff;text-align:right;}
 #about p:first-child{padding:0;border-top:0;}
 
 article .container .row img{padding:20px;border:1px dashed #595654;}
